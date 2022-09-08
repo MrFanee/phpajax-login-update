@@ -18,7 +18,8 @@ class MahasiswaController extends Controller
     public function index()
     {
         $mhs = MhsModel::paginate(6);
-        return view('data.mahasiswa', ['mhs' => $mhs]);
+        // $mhs_jm = MhsModel::count();
+        return view('data.mahasiswa', compact('mhs'));
     }
 
     public function create()

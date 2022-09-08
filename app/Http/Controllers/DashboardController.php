@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DosenModel;
+use App\Models\MatkulModel;
+use App\Models\MhsModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,7 +24,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $mhs = MhsModel::count();
+        $dosen = DosenModel::count();
+        $matkul = MatkulModel::count();
+        return view('dashboard', compact('mhs','dosen','matkul'));
     }
 
     public function profil()
