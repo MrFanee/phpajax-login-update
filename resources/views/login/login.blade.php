@@ -93,7 +93,7 @@
                                 type: 'success',
                                 title: 'Login Berhasil!',
                                 text: 'Anda akan di arahkan dalam 3 Detik',
-                                timer: 3000,
+                                timer: 2000,
                                 showCancelButton: false,
                                 showConfirmButton: false
                             })
@@ -121,8 +121,8 @@
 
                         Swal.fire({
                             type: 'error',
-                            title: 'Opps!',
-                            text: 'server error!'
+                            title: 'Login Gagal!',
+                            text: 'silahkan coba lagi!'
                         });
 
                         console.log(response);

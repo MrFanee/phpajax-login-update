@@ -20,10 +20,12 @@
             <ul class="list-group">
                 <li class="list-group-item active">Data</li>
                 <a href="{{ route('mahasiswa.index') }}" class="list-group-item" style="color: #212529;">Mahasiswa</a>
+                <a href="{{ route('dosen.index') }}" class="list-group-item" style="color: #212529;">Dosen</a>
+                <a href="{{ route('matkul.index') }}" class="list-group-item" style="color: #212529;">Matakuliah</a>
                 <a href="#" class="list-group-item" style="color: #212529;">coming soon</a>
             </ul>
             <ul class="list-group">
-                <li class="list-group-item active">Aksi Data</li>
+                <li class="list-group-item active">Data Export</li>
                 <a href="#" class="list-group-item" style="color: #212529;">Export Mahasiswa</a>
                 <a href="#" class="list-group-item" style="color: #212529;">coming soon</a>
             </ul>

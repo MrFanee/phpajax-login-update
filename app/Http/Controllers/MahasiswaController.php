@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\MhsModel;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\MhsModel;
+use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
 {
@@ -23,7 +23,7 @@ class MahasiswaController extends Controller
 
     public function create()
     {
-        return view('data/tambahmahasiswa');
+        return view('data.tambahmahasiswa');
     }
 
     public function store(Request $request)

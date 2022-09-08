@@ -31,6 +31,14 @@ Route::get('/mahasiswa', 'MahasiswaController@index')->name('mahasiswa.index');
 Route::get('/mahasiswa/create', 'MahasiswaController@create')->name('mahasiswa.create');
 Route::post('/mahasiswa/store', 'MahasiswaController@store')->name('mahasiswa.store');
 Route::get('mahasiswa/delete/{id}', 'MahasiswaController@delete')->name('mahasiswa.delete');
+// Dosen
+Route::get('/dosen', 'DosenController@index')->name('dosen.index');
+Route::get('/dosen/create', 'DosenController@create')->name('dosen.create');
+Route::post('/dosen/store', 'DosenController@store')->name('dosen.store');
+Route::get('/dosen/delete/{id_dosen}', 'DosenController@delete')->name('dosen.delete');
+
+// Matakuliah
+Route::get('/matkul', 'MatkulController@index')->name('matkul.index');
 
 // logout
 Route::get('/logout', 'DashboardController@logout')->name('dashboard.logout');
