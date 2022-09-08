@@ -25,7 +25,7 @@
                 <a href="#" class="btn btn-primary btn-sm" target="_blank">Cetak pdf</a>
                 {{-- excel --}}
                 <a href="#" class="btn btn-primary my-3 btn-sm" target="#">Export_excel</a>
-                <a href="{{ route('dosen.index')}}" class="btn btn-success my-3 btn-sm" target="#">Lihat Data</a>
+                <a href="{{ route('dosen.index')}}" class="btn btn-success my-3 btn-sm">Lihat Data</a>
                 <hr>
                 <label>Data Matakuliah Export</label>
                 <br>
@@ -33,7 +33,7 @@
                 <a href="#" class="btn btn-primary btn-sm" target="_blank">Cetak pdf</a>
                 {{-- excel --}}
                 <a href="#" class="btn btn-primary my-3 btn-sm" target="#">Export_excel</a>
-                <a href="{{ route('matkul.index')}}" class="btn btn-success my-3 btn-sm" target="#">Lihat Data</a>
+                <a href="{{ route('matkul.index')}}" class="btn btn-success my-3 btn-sm">Lihat Data</a>
                 <hr>
 
 
