@@ -39,6 +39,12 @@ Route::get('/dosen/delete/{id_dosen}', 'DosenController@delete')->name('dosen.de
 
 // Matakuliah
 Route::get('/matkul', 'MatkulController@index')->name('matkul.index');
+Route::get('/matkul/create', 'MatkulController@create')->name('matkul.create');
+Route::post('/matkul/store', 'MatkulController@store')->name('matkul.store');
+Route::get('/matkul/delete/{id_matkul}', 'MatkulController@delete')->name('matkul.delete');
+// Export Data
+Route::get('/xdata', 'ExportController@index')->name('xdata.index');
+
 
 // logout
 Route::get('/logout', 'DashboardController@logout')->name('dashboard.logout');

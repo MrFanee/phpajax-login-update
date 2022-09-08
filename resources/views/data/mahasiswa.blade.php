@@ -13,10 +13,7 @@
                 <hr>
 
                 <a href="{{ route('mahasiswa.create')}}" class="btn btn-success btn-sm">Tambah</a>
-                {{-- pdf --}}
-                <a href="#" class="btn btn-primary btn-sm" target="_blank">Cetak pdf</a>
-                {{-- excel --}}
-                <a href="#" class="btn btn-primary my-3 btn-sm" target="#">Export_excel</a>
+                <br>
                 <table class="table table-hover">
                     <tr>
                         <th scope="col">NO</th>
@@ -28,7 +25,7 @@
                     </tr>
                     @foreach ( $mhs as $m)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $mhs->firstItem() + $loop->index }}</td>
                         <td>{{ $m->nama}}</td>
                         <td>{{ $m->jk}}</td>
                         <td>{{ $m->jurusan}}</td>
@@ -41,6 +38,7 @@
                     </tr>
                     @endforeach
                 </table>
+                {{ $mhs->links() }}
             </div>
         </div>
     </div>

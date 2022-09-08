@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\DosenModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class DosenController extends Controller
 {
     public function index()
     {
-        $dosen = DosenModel::all();
-        return view('data.dosen', compact('dosen'));
+        $dosen = DosenModel::paginate(6);
+        return view('data.dosen', ['dosen' => $dosen]);
     }
 
     public function create()

@@ -13,10 +13,7 @@
                 <hr>
 
                 <a href="{{ route('dosen.create')}}" class="btn btn-success btn-sm">Tambah</a>
-                {{-- pdf --}}
-                <a href="#" class="btn btn-primary btn-sm" target="_blank">Cetak pdf</a>
-                {{-- excel --}}
-                <a href="#" class="btn btn-primary my-3 btn-sm" target="#">Export_excel</a>
+                <br>
                 <table class="table table-hover">
                     <tr>
                         <th scope="col">NO</th>
@@ -28,7 +25,7 @@
                     </tr>
                     @foreach ( $dosen as $d)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $dosen->firstItem() + $loop->index }}</td>
                         <td>{{ $d->nip}}</td>
                         <td>{{ $d->nama_dosen}}</td>
                         <td>{{ $d->jk}}</td>
@@ -41,6 +38,7 @@
                     </tr>
                     @endforeach
                 </table>
+                {{ $dosen->links() }}
             </div>
         </div>
     </div>

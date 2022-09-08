@@ -12,21 +12,19 @@
     <div class="row">
         <div class="col-md-2">
             <ul class="list-group">
-                <li class="list-group-item active">MAIN MENU</li>
+                <li class="list-group-item active">Aplikasi Data Universitas AA</li>
                 <a href="{{ route('dashboard.index') }}" class="list-group-item" style="color: #212529;">Dashboard</a>
                 <a href="{{ route('dashboard.profil') }}" class="list-group-item" style="color: #212529;">Profil</a>
-                <a href="#" class="list-group-item" style="color: #212529;">coming soon</a>
-                <a href="#" class="list-group-item" style="color: #212529;">coming soon</a>
+                {{-- <a href="#" class="list-group-item" style="color: #212529;">coming soon</a> --}}
             <ul class="list-group">
                 <li class="list-group-item active">Data</li>
                 <a href="{{ route('mahasiswa.index') }}" class="list-group-item" style="color: #212529;">Mahasiswa</a>
                 <a href="{{ route('dosen.index') }}" class="list-group-item" style="color: #212529;">Dosen</a>
                 <a href="{{ route('matkul.index') }}" class="list-group-item" style="color: #212529;">Matakuliah</a>
-                <a href="#" class="list-group-item" style="color: #212529;">coming soon</a>
             </ul>
             <ul class="list-group">
                 <li class="list-group-item active">Data Export</li>
-                <a href="#" class="list-group-item" style="color: #212529;">Export Mahasiswa</a>
+                <a href="{{ route('xdata.index')}}" class="list-group-item" style="color: #212529;">Export Data</a>
                 <a href="#" class="list-group-item" style="color: #212529;">coming soon</a>
             </ul>
             </ul>
@@ -44,7 +42,7 @@
     <div id="footer" class="row">
         <div class="col-md-10 offset-md-2">
             <div class="card">
-                <div class="card-body"><p style="text-align:center"> footer Cooming soon </p>
+                <div class="card-body"><p style="text-align:center"> Hak cipta 2022 - Universitas AA </p>
                 </div>
             </div>
         </div>
