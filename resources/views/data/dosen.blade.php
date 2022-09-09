@@ -12,7 +12,7 @@
                 <label>DOSEN</label>
                 <hr>
 
-                <a href="{{ route('dosen.create')}}" class="btn btn-success btn-sm">Tambah</a>
+                <a href="{{ route('dosen.create')}}" class="btn btn-success my-2 btn-sm">Tambah</a>
                 <br>
                 <table class="table table-hover">
                     <tr>
@@ -31,7 +31,7 @@
                         <td>{{ $d->jk}}</td>
                         <td>{{ $d->alamat}}</td>
                         <td>
-                            <a href="#" class="btn btn-primary btn-sm" >Edit</a>
+                            <a href="/dosen/edit/{{ $d->id_dosen }}" class="btn btn-primary btn-sm" >Edit</a>
                             <a href="/dosen/delete/{{ $d->id_dosen }}" class="btn btn-danger btn-sm">Hapus</a>
                         </td>
 

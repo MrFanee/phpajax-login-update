@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\DosenModel;
 use App\Models\MatkulModel;
 use App\Models\MhsModel;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -27,7 +29,8 @@ class DashboardController extends Controller
         $mhs = MhsModel::count();
         $dosen = DosenModel::count();
         $matkul = MatkulModel::count();
-        return view('dashboard', compact('mhs','dosen','matkul'));
+        $user = User::count();
+        return view('dashboard', compact('mhs','dosen','matkul','user'));
     }
 
     public function profil()
@@ -43,4 +46,11 @@ class DashboardController extends Controller
         Auth::logout();
         return redirect(route('login'));
     }
+
+    public function user()
+    {
+        $user = User::all();
+        return view('data.user', compact('user'));
+    }
+
 }

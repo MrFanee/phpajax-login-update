@@ -11,7 +11,7 @@
             <div class="card-body">
                 <label>MATAKULIAH</label>
                 <hr>
-                <a href="{{ route('matkul.create')}}" class="btn btn-success btn-sm">Tambah</a>
+                <a href="{{ route('matkul.create')}}" class="btn btn-success my-2 btn-sm">Tambah</a>
                 <br>
                 <table class="table table-hover">
                     <tr>
@@ -28,7 +28,7 @@
                         <td>{{ $ma->matkul}}</td>
                         <td>{{ $ma->sks}}</td>
                         <td>
-                            <a href="#" class="btn btn-primary btn-sm" >Edit</a>
+                            <a href="/matkul/edit/{{ $ma->id_matkul }}" class="btn btn-primary btn-sm" >Edit</a>
                             <a href="/matkul/delete/{{ $ma->id_matkul }}" class="btn btn-danger btn-sm">Hapus</a>
                         </td>
 

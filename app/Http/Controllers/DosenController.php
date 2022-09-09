@@ -45,4 +45,22 @@ class DosenController extends Controller
         return redirect('/dosen');
     }
 
+    public function edit($id_dosen)
+    {
+        $dosen = DB::table('dosen')->where('id_dosen', $id_dosen)->get();
+        return view('edit.editdosen', ['dosen' => $dosen]);
+    }
+
+    public function update(Request $request)
+    {
+        DB::table('dosen')->where('id_dosen', $request->id_dosen)->update([
+            'nip' => $request->nip,
+            'nama_dosen' => $request->nama_dosen,
+            'jk' => $request->jk,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect('/dosen');
+    }
+
 }

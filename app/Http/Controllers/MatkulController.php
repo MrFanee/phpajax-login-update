@@ -41,4 +41,22 @@ class MatkulController extends Controller
         DB::table('matkul')->where('id_matkul', $id_matkul)->delete();
         return redirect('/matkul');
     }
+
+    public function edit($id_matkul)
+    {
+        $matkul = DB::table('matkul')->where('id_matkul', $id_matkul)->get();
+        return view('edit.editmatkul', ['matkul' => $matkul]);
+    }
+
+    public function update(Request $request)
+    {
+        DB::table('matkul')->where('id_matkul', $request->id_matkul)->update([
+            'kode_matkul' => $request->kode_matkul,
+            'matkul' => $request->matkul,
+            'sks' => $request->sks
+        ]);
+
+        return redirect('/matkul');
+    }
+
 }

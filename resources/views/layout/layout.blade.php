@@ -21,6 +21,7 @@
                 <a href="{{ route('mahasiswa.index') }}" class="list-group-item" style="color: #212529;">Mahasiswa</a>
                 <a href="{{ route('dosen.index') }}" class="list-group-item" style="color: #212529;">Dosen</a>
                 <a href="{{ route('matkul.index') }}" class="list-group-item" style="color: #212529;">Matakuliah</a>
+                <a href="{{ route('dashboard.user')}}" class="list-group-item" style="color: #212529;">User</a>
             </ul>
             <ul class="list-group">
                 <li class="list-group-item active">Data Export</li>
